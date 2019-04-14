@@ -1,0 +1,13 @@
+// Achmad Kurnia Chandra -- 1817051070
+
+#include <iostream>
+#define BATAS_STACK 10
+using namespace std;
+
+struct node {
+	int data;
+	node *next;
+};
+
+node *head = NULL;
+
