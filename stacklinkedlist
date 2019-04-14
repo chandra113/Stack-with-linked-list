@@ -75,6 +75,56 @@ void printStackList() {
 			asisst = asisst->next;
 		}
 	}
-
 }
 
+
+int main (){
+
+	int choice, x;
+    	char repetition;
+    	MyStack s;
+    
+	do {	
+		system ("cls");
+		cout <<"===PROGRAM STACK using LINKED LIST===" << endl << endl;
+		//s.printStackList();
+		printStackList();
+		cout << "\nMenu :" << endl;	
+		cout << "1. Push" << endl;
+		cout << "2. Pop" << endl;
+		cout << "3. Exit" << endl << endl;
+		cout << "Pilih Menu: "; cin >> choice;
+		
+		switch (choice) {
+			case 1:
+				if(!isFull()) {
+					cout << "Input Angka : ";
+					cin >> x;
+					s.push(x);
+            	}
+				else {
+					cout << "\nStack Penuh!"<<endl;
+				}
+				break;
+		
+			case 2:
+				s.pop();
+				break;
+			
+			case 3:
+				cout<<"\nThank You!";
+				exit(0);
+				break;
+		
+			default:
+				cout<<"\n Pilihan Tak Tersedia.\n";		
+		}
+		cout<<"\n Ingin Melanjutkan? (Y/N)\n";
+      	cin >> repetition;
+	} 
+	
+	while (repetition=='y' || repetition=='Y');
+   
+    return 0;
+    
+}
