@@ -82,8 +82,12 @@ int main (){
     
 	do {	
 		system ("cls");
-		cout <<"===PROGRAM STACK using LINKED LIST===" << endl << endl;
-		//s.printStackList();
+		cout << "Achmad Kurnia Chandra" << endl;
+		cout << "     1817051070" << endl << endl;
+		cout <<	endl;
+		cout << "=======================================" << endl;
+		cout << "=== PROGRAM STACK using LINKED LIST ===" << endl;
+		cout << "=======================================" << endl << endl;
 		printStackList();
 		cout << "\nMenu :" << endl;	
 		cout << "1. Push" << endl;
