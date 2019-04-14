@@ -11,3 +11,70 @@ struct node {
 
 node *head = NULL;
 
+//class Bool {
+	
+	//public:
+	bool isEmpty (){
+		return head == NULL;
+	}
+
+	bool isFull (){
+		node *asisst;
+		int b;
+		asisst = head;
+	
+		while (asisst != NULL){
+			b++;
+			asisst = asisst->next;
+		}		
+	return b > BATAS_STACK-1;
+	}
+	
+//};	
+
+
+class MyStack {
+	
+	public:
+		
+	int getTop(){
+    	return head->data;
+	}
+	
+    void push(int NewData){
+		node *baru;
+		baru = new node;
+			baru->data = NewData;
+			baru->next = head;
+			head=baru;
+		cout << "Data "<< getTop() <<" disimpan\n";
+	}
+	
+    void pop(){
+    	node *erase;
+		erase = head;
+		cout << endl << "Data "<< erase->data <<" dihapuskan\n";
+	    head = head->next;
+		delete erase;
+    }
+
+};
+
+
+void printStackList() {
+	
+	node *asisst = head;
+	if (isEmpty()) {
+		cout<<"Stack tak berisi"<<endl;
+	}
+	
+	else {
+		cout<<"Data dalam stack: "<<endl;
+		while (asisst != NULL) {
+			cout << asisst->data << endl;
+			asisst = asisst->next;
+		}
+	}
+
+}
+
