@@ -11,27 +11,23 @@ struct node {
 
 node *head = NULL;
 
-//class Bool {
-	
-	//public:
-	bool isEmpty (){
-		return head == NULL;
-	}
 
-	bool isFull (){
-		node *asisst;
-		int b;
-		asisst = head;
-	
-		while (asisst != NULL){
-			b++;
-			asisst = asisst->next;
-		}		
-	return b > BATAS_STACK-1;
-	}
-	
-//};	
+bool isEmpty (){
+	return head == NULL;
+}
 
+bool isFull (){
+	node *asisst;
+	int b;
+	asisst = head;
+	
+	while (asisst != NULL){
+		b++;
+		asisst = asisst->next;
+	}		
+return b > BATAS_STACK-1;
+}
+	
 
 class MyStack {
 	
